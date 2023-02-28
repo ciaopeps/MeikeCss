@@ -1,3 +1,148 @@
-.timestamp.lite {
-    display: none;
+
+
+/*
+Style the body element to change the background of the messenger. Here we're using an image, but 
+you can just as easily use a solid color or a gradient.
+*/
+body {
+  /*background-image:url('https://flowxo-messenger-themes.s3.eu-west-1.amazonaws.com/jellybg.jpeg');*/
+  background-color: rgba(0,0,0,.1);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.fxo-messenger-iframe {
+  background-color:yellow;
+}
+/* 
+1. Chat Header
+*/
+
+/* The Title Background */
+.web-messenger-header {
+  height: 60px;
+  min-height: 60px;
+  background-color:rgba(0,0,0,0.5);
+  font-size:1.5em;
+}
+
+/* The Title Text */
+.web-messenger-header div.title {
+  color:white;
+  text-align:center;
+}
+
+/* The Reset Button */
+button.clear-chat svg {
+  stroke: white;
+  fill: white;
+}
+
+/* The Close Button */
+/* NOTE: Only applies when embedding the messenger as a widget.
+This is not shown when embedding as an iFrame. */
+button.close svg {
+  stroke: white;
+  fill: white;
+}
+
+/* 2. Messages */
+/* All Messages */
+li.message div.bubble {
+  font-size:1.2em;
+  border-radius:5px;
+}
+
+/* Message from the user */
+li.user.message > div.main > div.bubble {
+  color: white;
+  background-color: rgba(0,0,0,0.5);
+  box-shadow: -1px 2px 30px rgba(17, 54, 84, 0.03);
+}
+
+
+/* Messages from the bot */
+li.bot.message > div.main > div.bubble {
+  background-color: rgba(255,255,255,0.8);
+}
+
+/* The message timestamp */
+div.timestamp {
+  color: cornsilk;
+}
+
+/* Ths bots avatar image */
+li.message > div.main > img.icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+}
+
+/* The typing indicator */
+.web-messenger-typing > div {
+  background-color: rgb(201, 201, 211);
+}
+
+/* 3. Choices */
+/* Quick Reply Bubbles */
+li.message div.choice {
+    border-color: rgba(255,255,255,0.5);
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 20px;
+    padding:10px;
+}
+
+
+/* The body of a card */
+div.card {
+    border: solid 1px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 0;
+    background-color: rgba(255,255,255,0.95);
+}
+
+/* Any images in the chat */
+img {
+  opacity: 0.7;
+}
+
+/* The message composer (where the user types their chats) */
+div.compose {
+    background-color: rgba(255,255,255,0.5);
+    padding: 10px 20px;
+}
+
+/* The actual composer textbox */
+div.compose textarea {
+    background-color:rgba(255,255,255,0);
+  color:white;
+}
+
+/* The send button inside the composer*/
+#send-button-icon {
+  stroke: white;
+  fill: white;
+}
+
+/* The upload button inside the composer */
+#upload-button-icon {
+  fill:white;
+  stroke: white;
+}
+
+/* This class controls a blank white circle that
+   is a placeholder for the app avatar while the messenger is loading.
+   It can look out of place on a colorful background, so feel free to hide it
+   if it bothers you.
+*/
+.web-messenger-message-icon-placeholder {
+  display:none;
+}
+
+/* Attribution */
+div.powered-by {
+  color: cornsilk;
 }
