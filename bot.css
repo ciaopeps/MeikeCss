@@ -70,6 +70,7 @@ li.bot.message > div.main > div.bubble {
 /* The message timestamp */
 div.timestamp {
   color: cornsilk;
+  display: none;
 }
 
 /* Ths bots avatar image */
